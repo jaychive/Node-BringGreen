@@ -1,0 +1,359 @@
+* {
+    font-family: 'Pretendard', sans-serif;
+    font-weight: 300;
+    // letter-spacing: -0.083em;
+}
+
+li {
+    list-style: none;
+}
+
+p {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+
+h4 {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+strong {
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+.h100vh {
+    height: 100vh;
+}
+
+#root {
+    --swiper-theme-color: #105220;
+
+    a {
+        color: black
+    }
+
+    a:hover {
+        color: #105220;
+    }
+
+    h1 {
+        max-width: 9.5rem;
+
+        svg {
+            height: 2.8rem;
+            transform: translateY(-30%);
+            transform-origin: center;
+            transition: 0.5s;
+
+            #blackIcon {
+                transform: translateY(-200%);
+                transition: 0.5s;
+            }
+
+            #deaback {
+                transform: translateY(-200%);
+                transition: 0.5s;
+            }
+
+        }
+
+    }
+
+
+    #hd {
+        background-color: white;
+        filter: drop-shadow(1px 1px 5px rgba(0, 0, 0, 0.3));
+
+        &.scroll {
+            // background-color: rgba(0,0,0,.5);
+
+            a {
+                color: rgb(0, 0, 0);
+            }
+
+            h1 svg {
+                transform: translateY(0);
+
+                g {
+                    g {
+                        fill: rgb(81, 81, 81);
+                    }
+                }
+
+                #blackIcon {
+                    transform: translateY(0);
+                }
+
+                #deaback {
+                    transform: translateY(0);
+                }
+
+            }
+
+
+        }
+
+        #allMenu {
+            font-weight: 500;
+        }
+
+        .mobileNavi {
+            position: absolute;
+            top: 100%; //calc(100% + 1px);
+            left: 0;
+            right: 0;
+            background-color: white;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease-out;
+
+            a {
+                color: black !important
+            }
+
+            &:before,
+            &:after {
+                content: "";
+                display: block;
+                height: 1rem;
+
+            }
+
+            &.on {
+                max-height: calc(100vh - 50px);
+
+            }
+
+        }
+
+    }
+
+}
+
+// jay customize
+
+.sectionSpace {
+    padding-top: 48px;
+    height: 100vh;
+}
+
+.logoImgBox {
+    width: 40vw;
+    @media (max-width: 48rem) {
+        width: 80vw;
+    }
+}
+
+.titleSpace {
+    font-size: 3rem;
+    padding-top: 3rem;
+    font-weight: 900;
+}
+
+.eventSpace {
+    padding-top: 3rem;
+
+    .eventStrong {
+        font-size: 4rem;
+    }
+
+    .eventType {
+        font-size: 2rem;
+    }
+
+    .eventTitle {
+        font-size: 3rem;
+        font-weight: 900;
+    }
+}
+
+.descPhr {
+    font-size: 1rem
+}
+
+#main {
+    .mainImg {
+        background: url('../../public/img/compImg/main1.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        height: 100vh;
+        position: relative;
+        z-index: 0;
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            width: 100%;
+            left: 0;
+            height: 100%;
+            background-color: rgba(255, 255, 255, 0.7);
+            z-index: 1;
+        }
+
+        .mainContent {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            z-index: 2;
+
+            p {
+                font-size: 1.5rem;
+                font-weight: 500;
+            }
+
+            strong {
+                font-size: 2rem;
+                font-weight: 600;
+            }
+
+            .reusableBtn a:hover {
+                background-color: #105220;
+                color: white !important;
+            }
+        }
+    }
+}
+
+.brandWhole {
+    #brand{
+        background-color: #9aa7ac;
+
+        .brandImg {
+            background-image: url('../../public/img/compImg/brand1.jpg');
+            background-repeat: no-repeat;
+            background-position-y: 25%;
+            background-size: cover;
+            z-index: 0;
+
+            top: 0; height: 100%;
+            left: 0; width: 100%;
+
+    
+            @media (max-width: 48rem) {
+                background-position: center;
+                height: 30rem;
+            }
+    
+            &::after {
+                content: "";
+                background-color: rgba(0, 0, 0, 0.3);
+                position: absolute;
+                top: 0;
+                height: 100%;
+                left: 0;
+                width: 100%;
+                z-index: 1;
+            }
+    
+            .brandContent {
+                position: relative;
+                z-index: 2;
+    
+                h2 {
+                    font-size: 3rem;
+                    font-weight: 900;
+                }
+
+                .brandBox {
+                    transform: translateY(150%);
+                }
+    
+                .reusableBtn a:hover {
+                    background-color: #ffffff;
+                    color: black !important;
+                }
+            }
+    
+    
+        }
+    }
+
+}
+
+#review {
+    .reviewBox {
+        img {
+            border-radius: 3rem;
+        }
+    }
+}
+
+#plus {
+    .dotCircle {
+        width: 16rem;
+        height: 16rem;
+        border: 5px dotted #105220;
+        border-radius: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+
+.swiper {
+    overflow: hidden;
+    padding: 50px 35px !important;
+
+    .swiper-wrapper {
+        display: flex;
+
+        .swiper-slide {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            img {
+                width: 15rem;
+            }
+        }
+    }
+
+    .swiper-scrollbar-horizontal {
+        height: 2px;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+    }
+}
+
+#event1 {
+    .col-5 > img {
+        border-radius: 3rem;
+    }
+}
+
+#others {
+    .reusableBtn a:hover {
+        background-color: #105220;
+        color: white !important;
+    }
+}
+
+.quickIcon {
+    padding: 0 1rem;
+
+    a {
+        font-size: 1.5rem;
+    }
+}
+
+.youtubeDiv {
+    height: 0;
+    padding-top: 56%;
+
+    iframe {
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+    }
+}

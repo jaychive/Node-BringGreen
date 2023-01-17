@@ -1,0 +1,47 @@
+{
+  "mainDB":{
+    "btnContent":"응모하기",
+    "btnColor":"dark",
+    "btnLink":"#event2",
+    "btnTarget":""
+  },
+
+  "newDB":{
+    "h2":"티트리 시카 수딩 크림의 업그레이드, PLUS+"
+  },
+
+  "brandDB":{
+    "btnContent":"제품보기",
+    "btnColor":"white",
+    "btnLink":"#others",
+    "btnTarget":""
+  },
+
+  "reviewDB":{
+    "h2":"모든 피부에 자연주의 수분을"
+  },
+
+  "plusDB":{
+    "h2":"리뉴얼로 업그레이드된 티트리 시카"
+  },
+
+  "event1DB":{
+    "strong":"EVENT 1",
+    "eventType":"올리브영 오프라인 매장 이벤트",
+    "h2":"다시 Bring Green 어떠세요?"
+  },
+
+  "event2DB":{
+    "strong":"EVENT 2",
+    "eventType":"올리브영 온라인 구매 이벤트",
+    "h2":"구매만 해도 사은품 증정!"
+  },
+
+  "productsDB": {
+    "h2":"PRODUCTS",
+    "btnContent":"구매하러 가기",
+    "btnColor":"dark",
+    "btnLink":"https://www.oliveyoung.co.kr/store/display/getBrandShopDetail.do?onlBrndCd=A002253&chlNo=6&chlDtlNo=11&utm_source=google&utm_medium=powerlink&utm_campaign=onpro_emnet_default-brand_0101_1231&utm_content=pc_brand&gclid=EAIaIQobChMIy_qNiank-gIVSk5gCh12jQc9EAAYASAAEgLqhPD_BwE",
+    "btnTarget":"_blank"
+  }
+}

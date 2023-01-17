@@ -1,0 +1,29 @@
+{
+  "navDB": [
+    {
+      "navText": "NEW",
+      "navLink": "new"
+    },
+    {
+      "navText": "BRAND",
+      "navLink": "brand"
+    },
+    {
+      "navText": "PLUS+",
+      "navLink": "plus"
+    },
+    {
+      "navText": "EVENTS",
+      "navLink": "event1"
+    },
+    {
+      "navText": "OTHERS",
+      "navLink": "others"
+    }
+  ],
+  "quickDB" : [
+    ["YouTube", "fa-brands fa-youtube", "https://www.youtube.com/channel/UC6cDQXOxru-w-T1yiH3mlLQ"],
+    ["Twitter", "fa-brands fa-twitter", "https://twitter.com/bringgreen_kr"],
+    ["Official Site", "fa-solid fa-globe", "https://www.oliveyoung.co.kr/store/display/getBrandShopDetail.do?onlBrndCd=A002253&chlNo=6&chlDtlNo=11&utm_source=google&utm_medium=powerlink&utm_campaign=onpro_emnet_default-brand_0101_1231&utm_content=pc_brand&gclid=EAIaIQobChMIy_qNiank-gIVSk5gCh12jQc9EAAYASAAEgLqhPD_BwE"]
+  ]
+}
