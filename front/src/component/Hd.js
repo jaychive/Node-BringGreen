@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react';
+import { useCallback, useEffect, useRef, useState } from 'react';
 import axios from 'axios';
 import Navi from './Navi';
 
@@ -42,14 +42,14 @@ function Header(props) {
 
   const [navdata, updateNav] = useState([])
 
+  const axiosData = useCallback(async()=>{
+    const response = await axios.get("http://localhost:8080/navProxy/navdb");
+    updateNav(response.data.quickDB)
+  },[])
+
   useEffect(()=>{
-    axios
-      .get("http://localhost:8080/navProxy/navdb")
-      .then((res)=>{
-        const navigation = [...res.data.quickDB];
-        updateNav(navigation);
-      })
-  })
+    axiosData();
+  },[axiosData]);
 
   return (
     <header ref={targetRef} id="hd" className="App-header d-flex justify-content-between align-items-center flex-row px-lg-5 py-2 fixed-top ">

@@ -1,21 +1,27 @@
-import React from 'react';
+import React, { useCallback } from 'react';
 import { useEffect, useState } from "react";
 import axios from 'axios';
 
 function Title(props) {
-  const [propsdata, updateProps] = useState({})
+  const [propsdata, updateProps] = useState(null)
+
+  const axiosData = useCallback(async()=>{
+      const response = await axios.get("http://localhost:8080/propsProxy/propsdb")
+      updateProps(response.data)
+  },[]);
 
   useEffect(()=>{
-    axios
-      .get("http://localhost:8080/propsProxy/propsdb")
-      .then((res)=>{
-        const property = {...res.data};
-        updateProps(property);
-      },[])
-  })
+    axiosData()
+  },[]);
+
+  console.log(propsdata);
+
   return (
-    <div></div>
-    // <h2 className='titleSpace text-center'>{propsdata[props.type].h2}</h2>
+    <h2 className='titleSpace text-center'>
+      {
+        propsdata && propsdata[props.type].h2
+      }
+    </h2>
   );
 }
 

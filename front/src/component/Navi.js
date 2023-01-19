@@ -1,18 +1,20 @@
 import { useEffect, useState } from "react";
 import Scrollspy from "react-scrollspy";
 import axios from 'axios';
+import { useCallback } from "react";
 
 function Navi(props){
     const [navdata, updateNav] = useState([])
 
+    const axiosData = useCallback(async()=>{
+      const response = await axios.get("http://localhost:8080/navProxy/navdb");
+      updateNav(response.data.navDB)
+    },[])
+
     useEffect(()=>{
-      axios
-        .get("http://localhost:8080/navProxy/navdb")
-        .then((res)=>{
-          const navigation = [...res.data.navDB];
-          updateNav(navigation);
-        },[])
-    })
+      axiosData();
+    },[axiosData]);
+
     return(
         <Scrollspy className={ 'd-md-flex mb-0 gnb_ul ' + props.cls + ' ' + props.toggle } items={[]} currentClassName="is-current">
         {
