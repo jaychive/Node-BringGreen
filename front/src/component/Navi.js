@@ -16,7 +16,7 @@ function Navi(props){
     },[axiosData]);
 
     return(
-        <Scrollspy className={ 'd-md-flex mb-0 gnb_ul ' + props.cls + ' ' + props.toggle } items={[]} currentClassName="is-current">
+        <Scrollspy className={ 'd-md-flex mb-0 gnb_ul ' + props.cls + ' ' + props.toggle } items={[navdata&&navdata.navLink]} currentClassName="is-current">
         {
           navdata.map((item, index) =>{
             return(

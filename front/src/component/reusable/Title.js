@@ -12,9 +12,7 @@ function Title(props) {
 
   useEffect(()=>{
     axiosData()
-  },[]);
-
-  console.log(propsdata);
+  },[axiosData]);
 
   return (
     <h2 className='titleSpace text-center'>
